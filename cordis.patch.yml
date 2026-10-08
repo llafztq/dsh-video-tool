@@ -1,0 +1,7 @@
+# dsh-video-tool bundle patch layer.
+#
+# 这里声明插件自己的加载器入口，profile 组合时会被 insert 进插件树。
+# 入口用「锚定在补丁文件旁的相对路径」，避免包名入口被 Loader 按 URL 缓存住旧模块。
+- insert:
+    - id: dsh-video-tool
+      name: ./index.mjs

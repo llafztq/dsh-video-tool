@@ -1,0 +1,49 @@
+{
+  "name": "dsh-video-tool",
+  "version": "1.0.0",
+  "description": "Video editing toolset for DeepSeek Harness — trim, concat, audio, subtitles, transform, transcode and frame grabbing, powered by ffmpeg.",
+  "type": "module",
+  "main": "index.mjs",
+  "exports": {
+    ".": "./index.mjs",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.mjs",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20",
+    "dsh": ">=0.2.0-rc.1"
+  },
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "ffmpeg",
+    "video",
+    "video-editing"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": ">=0.2.0-rc.1 <0.3.0-0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "runtime": "host"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/llafztq/dsh-video-tool.git"
+  },
+  "bugs": {
+    "url": "https://github.com/llafztq/dsh-video-tool/issues"
+  },
+  "homepage": "https://github.com/llafztq/dsh-video-tool#readme"
+}
